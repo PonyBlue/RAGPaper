@@ -1,0 +1,132 @@
+# ================================
+# 环境变量（包含 API Key，不应提交）
+# ================================
+.env
+.env.local
+.env.*.local
+
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ================================
+# 虚拟环境
+# ================================
+venv/
+ENV/
+env/
+.venv
+rag-paper/
+
+# ================================
+# IDE 和编辑器
+# ================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ================================
+# 项目特定数据
+# ================================
+# PDF 文件（可能很大，建议本地管理）
+data/*.pdf
+!data/.gitkeep
+
+# 向量数据库（可重新生成）
+chroma_db/
+!chroma_db/.gitkeep
+
+# 日志文件
+*.log
+
+# ================================
+# Jupyter Notebook
+# ================================
+.ipynb_checkpoints
+*.ipynb
+
+# ================================
+# 操作系统
+# ================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ================================
+# Streamlit
+# ================================
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ================================
+# Claude Code
+# ================================
+.claude/
+
+# ================================
+# 测试和临时文件
+# ================================
+test_*.py
+debug_*.py
+diagnose_*.py
+temp_*.py
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+nul
+
+# ================================
+# 其他
+# ================================
+# 打包文件
+*.zip
+*.tar.gz
+*.rar
+
+# 缓存
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 覆盖率报告
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
