@@ -1,0 +1,44 @@
+# Python缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# 虚拟环境
+venv/
+env/
+ENV/
+
+# IDE配置
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# 环境变量（使用volumes挂载）
+.env
+
+# 数据目录（使用volumes挂载）
+data/
+chroma_db/
+logs/
+
+# 测试和文档
+test_*.py
+demo_*.py
+*.md
+docs/
+
+# 临时文件
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

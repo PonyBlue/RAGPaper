@@ -130,3 +130,7 @@ htmlcov/
 .coverage.*
 coverage.xml
 *.cover
+
+/logs
+/data
+/docs

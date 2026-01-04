@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  rag-paper:
+    build: .
+    container_name: rag-paper-system
+    volumes:
+      # 数据持久化
+      - ./data:/app/data
+      - ./chroma_db:/app/chroma_db
+      - ./logs:/app/logs
+      # 环境配置
+      - ./.env:/app/.env
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    networks:
+      - rag-network
+    # 健康检查（可选）
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  rag-network:
+    driver: bridge
+
+volumes:
+  data:
+  chroma_db:
+  logs:
